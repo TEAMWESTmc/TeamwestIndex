@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no;" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TEAMWEST</title>
   <meta name="description" content="마인크래프트 컨텐츠 제작팀 TEAMWEST 입니다.">
   <meta name="keywords"
@@ -15,13 +15,13 @@
   <meta property="og:image" content="https://teamwest.co.kr/images/thumb.png">
   <meta property="og:site_name" content="TEAMWEST">
   <meta property="og:description" content="마인크래프트 컨텐츠 제작팀 TEAMWEST 입니다.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark light" />
-  <link rel="icon" type="image/png" href="../../must/fav.png">
+  <link rel="icon" type="image/png" href="../../images/fav.png">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="../../style.css">
+  <script src="../../i18n.js"></script>
   <script src="../../script.js"></script>
   <script src="../../jarallax.min.js"></script>
   <script src="../../boot.js"></script>
@@ -36,8 +36,8 @@
 </head>
 <header class="navbar navbar-sticky navbar-expand-lg navbar-light bg-light shadow-lg">
   <div class="container">
-    <a href="https://teamwest.co.kr" class="navbar-brand fs-2 fw-bolder">
-      <img src="../../must/logo.svg" width="30px" alt="TEAMWEST Logo">
+    <a href="../../" class="navbar-brand fs-2 fw-bolder">
+      <img src="../../images/logo.svg" width="30px" alt="TEAMWEST Logo">
       TEAMWEST
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse1" aria-expanded="false">
@@ -47,111 +47,99 @@
       <hr class="d-lg-none mt-3 mb-2">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a href="../../" class="nav-link">Home</a>
+          <a href="../../" class="nav-link" data-i18n="nav.home">Home</a>
         </li>
         <li class="nav-item">
           <a href="https://dmap.teamwest.co.kr/" class="nav-link">Dynmap</a>
         </li>
         <li class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Intro</a>
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" data-i18n="nav.intro">Intro</a>
           <ul class="dropdown-menu">
-            <li class="dropdown">
-            <li><a class="dropdown-item" href="../../intro/slc/">송림시</a></li>
-            <li><a class="dropdown-item" href="../../intro/twg/">서쪽으로의 문</a></li>
-            <li><a class="dropdown-item" href="../../intro/huc/">한울시</a></li>
-            <li><a class="dropdown-item" href="../../intro/sgc/">서경시</a></li>
+            <li><a class="dropdown-item" href="../../intro/slc/" data-i18n="nav.slc">송림시</a></li>
+            <li><a class="dropdown-item" href="../../intro/twg/" data-i18n="nav.twg">서쪽으로의 문</a></li>
+            <li><a class="dropdown-item" href="../../intro/huc/" data-i18n="nav.huc">한울시</a></li>
+            <li><a class="dropdown-item" href="../../intro/sgc/" data-i18n="nav.sgc">서경시</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Link</a>
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" data-i18n="nav.link">Link</a>
           <ul class="dropdown-menu">
-            <li class="dropdown">
-              <li><a class="dropdown-item" href="https://www.youtube.com/channel/UCmMPByJDpbNjmFCvM0-xNHA">Youtube</a></li>
-              <li><a class="dropdown-item" href="https://www.planetminecraft.com/member/west_builders/">PlanetMC</a></li>
-              <li><a class="dropdown-item" href="https://github.com/TEAMWESTmc/West-Urban">ResourcePack</a></li>
-              <li><a class="dropdown-item" href="https://status.teamwest.co.kr">Server Status</a></li>
-              <li><a class="dropdown-item" href="https://github.com/TEAMWESTmc">GitHub</a></li>
+            <li><a class="dropdown-item" href="https://www.youtube.com/channel/UCmMPByJDpbNjmFCvM0-xNHA">Youtube</a></li>
+            <li><a class="dropdown-item" href="https://www.planetminecraft.com/member/west_builders/">PlanetMC</a></li>
+            <li><a class="dropdown-item" href="https://github.com/TEAMWESTmc/West-Urban">ResourcePack</a></li>
+            <li><a class="dropdown-item" href="https://status.teamwest.co.kr">Server Status</a></li>
+            <li><a class="dropdown-item" href="https://github.com/TEAMWESTmc">GitHub</a></li>
           </ul>
         </li>
-        </li>
-        </li>
-        
       </ul>
-      <a href="../../en/" class="nav-link">EN</a>
+      <a href="javascript:void(0)" class="nav-link" onclick="TWi18n.toggleLang()" data-i18n="nav.lang">EN</a>
       <a href="../../download/" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex">
-        <i class='bx bxs-download pt-1' style='color:#fffff7' ></i>Download</a>
+        <i class='bx bxs-download pt-1' style='color:#fffff7'></i><span data-i18n="nav.download">Download</span></a>
     </nav>
-    
   </div>
 </header>
 <body>
 
-
-
-
   <div class="jarallax bg-dark py-5" data-jarallax data-speed="0.5">
     <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></span>
-    <div class="jarallax-img" style="background-image: url(../../must/background_twg.png);"></div>
+    <div class="jarallax-img" style="background-image: url(../../images/background_twg.png);"></div>
     <div class="position-relative text-center py-sm-5">
-
-        <p class="fs-2 fw-bolder text-white">서쪽으로의 문 ( The West Gate )은 <br>2015년 진행된 프로젝트로 중세 하늘섬 프로젝트 입니다.</p>
-
+      <p class="fs-2 fw-bolder text-white" data-i18n="twg.hero">서쪽으로의 문 ( The West Gate )은 <br>2015년 진행된 프로젝트로 중세 하늘섬 프로젝트 입니다.</p>
     </div>
   </div>
-  <section class="container  pt-3">
-        <h1 class="text-center">서쪽으로의 문 사진<br><a href="https://blog.naver.com/PostList.naver?blogId=yesok1129&from=postList&categoryNo=96" class="btn btn-primary btn-sm rounded lg-inline-flex">관련 글 보기</a></h1>
-        
-        </nav>
-      </section>
+  <section class="container pt-3">
+    <h1 class="text-center"><span data-i18n="twg.section.title">서쪽으로의 문 사진</span><br><a href="https://blog.naver.com/PostList.naver?blogId=yesok1129&from=postList&categoryNo=96" class="btn btn-primary btn-sm rounded lg-inline-flex" data-i18n="twg.section.btn">관련 글 보기</a></h1>
+  </section>
   <!--images-->
   <section class="container pt-1 pb-5 mb-2 mb-md-4 mb-lg-5">
-        <div class="row pb-lg-3">
+    <div class="row pb-lg-3">
 
-          <!-- Item -->
-          <div class="col-md-6">
-            <div class="card card-portfolio">
-              <div class="card-img shadow-lg">
-                <img src="./image/1.png" alt="모던하우스 단지">
-              </div>
-              <div class="card-body">
-              </div>
-            </div>
+      <!-- Item -->
+      <div class="col-md-6">
+        <div class="card card-portfolio">
+          <div class="card-img shadow-lg">
+            <img src="./image/1.png" alt="The West Gate">
           </div>
+          <div class="card-body">
+          </div>
+        </div>
+      </div>
 
-          <!-- Item -->
-          <div class="col-md-6">
-            <div class="card card-portfolio">
-              <div class="card-img shadow-lg">
-                <img src="./image/2.png" alt="국제업무지구 사진">
-              </div>
-              <div class="card-body">
-              </div>
-            </div>
+      <!-- Item -->
+      <div class="col-md-6">
+        <div class="card card-portfolio">
+          <div class="card-img shadow-lg">
+            <img src="./image/2.png" alt="The West Gate">
           </div>
+          <div class="card-body">
+          </div>
+        </div>
+      </div>
 
-          <!-- Item -->
-          <div class="col-md-6">
-            <div class="card card-portfolio">
-              <div class="card-img shadow-lg">
-                <img src="./image/3.png" alt="인더사이드 본사">
-              </div>
-              <div class="card-body">
-              </div>
-            </div>
+      <!-- Item -->
+      <div class="col-md-6">
+        <div class="card card-portfolio">
+          <div class="card-img shadow-lg">
+            <img src="./image/3.png" alt="The West Gate">
           </div>
+          <div class="card-body">
+          </div>
+        </div>
+      </div>
 
-          <!-- Item -->
-          <div class="col-md-6">
-            <div class="card card-portfolio">
-              <div class="card-img shadow-lg">
-                <img src="./image/4.png" alt="현수교">
-              </div>
-              <div class="card-body">
-              </div>
-            </div>
+      <!-- Item -->
+      <div class="col-md-6">
+        <div class="card card-portfolio">
+          <div class="card-img shadow-lg">
+            <img src="./image/4.png" alt="The West Gate">
           </div>
-      </section>
-      
+          <div class="card-body">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </body>
 
 <footer class="footer dark-mode bg-dark border-top border-light pt-5 pb-4 pb-lg-5">
@@ -159,15 +147,13 @@
     <div class="row pb-5">
       <div class="col-lg-4 col-md-6">
         <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
-          <img src="../../must/logo_lg.svg" width="300" alt="TEAMWEST Logo">
+          <img src="../../images/logo_lg.svg" width="300" alt="TEAMWEST Logo">
         </div>
-
       </div>
       <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
         <div id="footer-links" class="row">
           <div class="col-lg-4">
             <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
-
               <ul class="nav flex-column mb-2 mb-lg-0">
                 <li class="nav-item"><a href="https://www.youtube.com/channel/UCmMPByJDpbNjmFCvM0-xNHA" class="nav-link d-inline-block px-0 pt-1 pb-2">Youtube</a></li>
                 <li class="nav-item"><a href="https://www.planetminecraft.com/member/west_builders/" class="nav-link d-inline-block px-0 pt-1 pb-2">PlanetMC</a></li>
@@ -180,23 +166,22 @@
           <div class="col-xl-4 col-lg-3">
             <div id="social-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
               <ul class="nav flex-column mb-2 mb-lg-0">
-                <li class="nav-item"><a href="../../intro/slc/" class="nav-link d-inline-block px-0 pt-1 pb-2">송림시</a></li>
-                <li class="nav-item"><a href="../../intro/twg/" class="nav-link d-inline-block px-0 pt-1 pb-2">서쪽으로의 문</a></li>
-                <li class="nav-item"><a href="../../intro/huc/" class="nav-link d-inline-block px-0 pt-1 pb-2">한울시</a></li>
-                <li class="nav-item"><a href="../../intro/sgc/" class="nav-link d-inline-block px-0 pt-1 pb-2">서경시</a></li>
+                <li class="nav-item"><a href="../../intro/slc/" class="nav-link d-inline-block px-0 pt-1 pb-2" data-i18n="nav.slc">송림시</a></li>
+                <li class="nav-item"><a href="../../intro/twg/" class="nav-link d-inline-block px-0 pt-1 pb-2" data-i18n="nav.twg">서쪽으로의 문</a></li>
+                <li class="nav-item"><a href="../../intro/huc/" class="nav-link d-inline-block px-0 pt-1 pb-2" data-i18n="nav.huc">한울시</a></li>
+                <li class="nav-item"><a href="../../intro/sgc/" class="nav-link d-inline-block px-0 pt-1 pb-2" data-i18n="nav.sgc">서경시</a></li>
               </ul>
             </div>
           </div>
           <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
-            <h6 class="mb-2">Contact Us</h6>
+            <h6 class="mb-2" data-i18n="footer.contact">Contact Us</h6>
             <a href="mailto:admin@teamwest.co.kr" class="fw-medium">admin@teamwest.co.kr</a>
           </div>
         </div>
       </div>
     </div>
     <p class="fs-xs text-center text-md-start pb-2 pb-lg-0 mb-0">
-      <span class="text-light opacity-50">© TEAMWEST All rights reserved.</span>
+      <span class="text-light opacity-50" data-i18n="footer.copyright">&copy; TEAMWEST All rights reserved.</span>
     </p>
   </div>
-  
 </footer>
