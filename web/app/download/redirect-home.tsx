@@ -1,0 +1,12 @@
+"use client"
+
+import * as React from "react"
+import { useRouter } from "next/navigation"
+
+export function RedirectHome() {
+  const router = useRouter()
+  React.useEffect(() => {
+    router.replace("/")
+  }, [router])
+  return null
+}
